@@ -9,6 +9,12 @@ import UIKit
 
 class MovieTableViewCell: UITableViewCell {
     
+    // MARK: - Outlets
+    @IBOutlet weak var moviePosterImageView: UIImageView!
+    @IBOutlet weak var movieTitleLabel: UILabel!
+    @IBOutlet weak var movieRatingLabel: UILabel!
+    @IBOutlet weak var movieDescriptionLabel: UILabel!
+    
     // MARK: - Properties
     var image: UIImage? {
         didSet {
