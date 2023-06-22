@@ -39,7 +39,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="V4f-3o-nYI">
                                             <rect key="frame" x="22" y="13" width="277.5" height="142"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(The Movie Title)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qO-SF-VKg">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(The Movie Title)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qO-SF-VKg">
                                                     <rect key="frame" x="0.0" y="0.0" width="277.5" height="44.5"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <nil key="textColor"/>
@@ -60,7 +60,6 @@
                                             </subviews>
                                         </stackView>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.15744033460000001" green="0.92504143709999997" blue="0.99998575450000005" alpha="0.4954621776" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="bottomMargin" secondItem="rZ3-up-aWw" secondAttribute="bottom" constant="2" id="Ke1-7c-DqG"/>
                                         <constraint firstItem="rZ3-up-aWw" firstAttribute="trailing" secondItem="jCJ-qN-bX3" secondAttribute="trailingMargin" constant="2" id="PgP-ym-7Of"/>

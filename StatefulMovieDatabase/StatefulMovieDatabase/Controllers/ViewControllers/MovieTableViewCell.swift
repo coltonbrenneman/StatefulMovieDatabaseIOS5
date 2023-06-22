@@ -22,25 +22,30 @@ class MovieTableViewCell: UITableViewCell {
         }
     }
     
-    func updateView() {
-        //TODO: - Update the Strings with the real values
-        var configuration = defaultContentConfiguration()
-        configuration.text = "What's love got to do with it?"
-        configuration.secondaryText = "Whats love but a second hand emotion"
-        configuration.secondaryTextProperties.numberOfLines = 4
-        configuration.imageProperties.maximumSize = CGSize(width: 50, height: 100)
-        contentConfiguration = configuration
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        moviePosterImageView.image = nil
     }
     
-    
-    override func updateConfiguration(using state: UICellConfigurationState) {
-        // Called when the image is set
-        super.updateConfiguration(using: state)
-        guard var configuration = contentConfiguration as? UIListContentConfiguration else { return }
-        configuration.image = self.image
-        contentConfiguration = configuration
+    // MARK: - Functions
+    func updateView(movie: Movie) {
+        fetchImage(movie: movie)
     }
-}
-
-// MARK: - Functions
-
+    
+    func fetchImage(movie: Movie) {
+        guard let posterPath = movie.posterPath else { return }
+        NetworkingController().fetchImage(with: posterPath) { result in
+            switch result {
+            case .success(let poster):
+                DispatchQueue.main.async {
+                    self.moviePosterImageView.image = poster
+                    self.movieTitleLabel.text = movie.movieName
+                    self.movieRatingLabel.text = "Movie Rating: \(movie.movieRating)"
+                    self.movieDescriptionLabel.text = movie.movieDescription
+                }
+            case .failure(let error):
+                print(error.errorDescription)
+            }
+        }
+    }
+} //End of class

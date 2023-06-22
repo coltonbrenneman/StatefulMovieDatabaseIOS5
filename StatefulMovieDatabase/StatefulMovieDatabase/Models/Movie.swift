@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct topLevelDictionary: Decodable {
+struct TopLevelDictionary: Decodable {
     private enum CodingKeys: String, CodingKey {
         case currentPage = "page"
         case movies = "results"
@@ -30,5 +30,5 @@ struct Movie: Decodable {
     let movieName: String
     let movieRating: Double
     let movieDescription: String
-    let posterPath: String
+    let posterPath: String?
 }

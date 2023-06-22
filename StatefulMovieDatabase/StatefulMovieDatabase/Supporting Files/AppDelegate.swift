@@ -14,6 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+//        NetworkingController().fetch(endpoint: "movie", with: "The Mummy") { result in
+//            switch result {
+//            case .success(let topLevelDictionary):
+//                print(topLevelDictionary)
+//            case .failure(let error):
+//                print(error.errorDescription!)
+//            }
+//        }
         return true
     }
 
