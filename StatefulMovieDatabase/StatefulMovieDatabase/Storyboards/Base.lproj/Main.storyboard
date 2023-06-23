@@ -190,6 +190,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jxB-qD-XbQ"/>
+                    <connections>
+                        <outlet property="movieBudgetLabel" destination="cIC-zs-eEV" id="0JY-6u-Uz5"/>
+                        <outlet property="movieOverviewLabel" destination="oIm-ne-bG3" id="9D5-Qx-n3E"/>
+                        <outlet property="moviePopularityLabel" destination="HAV-XW-MVb" id="srq-LU-aYy"/>
+                        <outlet property="moviePosterImageView" destination="SAL-hK-6oL" id="VG0-xQ-qHL"/>
+                        <outlet property="movieRevenueLabel" destination="ocL-9v-Xro" id="tgv-MX-Bp1"/>
+                        <outlet property="movieRuntimeLabel" destination="nEL-Vv-dQM" id="hU8-5l-HKd"/>
+                        <outlet property="movieTaglineLabel" destination="UUa-I2-rMr" id="THz-MQ-IVE"/>
+                        <outlet property="movieTitleLabel" destination="jWW-XK-UID" id="TMp-TI-TvT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a4P-WA-Syc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

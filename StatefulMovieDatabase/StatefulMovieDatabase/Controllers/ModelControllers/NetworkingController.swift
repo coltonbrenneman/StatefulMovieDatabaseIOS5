@@ -35,7 +35,32 @@ struct NetworkingController {
             }
         }.resume() // End of dataTask
     } // End of fetch
-    //https://image.tmdb.org/t/p/w500
+    
+    // Callback is the samething as completion therefore we can name it anything
+    func fetchMovieDetail(for id: Int, callback: @escaping(Result<MovieDetailDict, ResultError>) -> Void) {        
+        guard let baseURL = URL(string: "https://api.themoviedb.org/3/movie") else {callback(.failure(.invalidURL)); return}
+               
+               var urlRequest = URLRequest(url: baseURL)
+               urlRequest.url?.append(path:"\(id)")
+               let apiKeyQueryItem = URLQueryItem(name: "api_key", value: "d9d57c8ef81b58501e0045ddf733d8a6")
+               urlRequest.url?.append(queryItems: [apiKeyQueryItem])
+        
+        print(urlRequest.url)
+        
+        URLSession.shared.dataTask(with: urlRequest) { movieDetailData, _, movieDetailError in
+            if let movieDetailError {
+                callback(.failure(.thrownError(movieDetailError))) ; return
+            } // End of error
+            guard let movieDetailData else { callback(.failure(.noData)) ; return }
+            do {
+                let movieDetailDict = try JSONDecoder().decode(MovieDetailDict.self, from: movieDetailData)
+                callback(.success(movieDetailDict))
+            } catch {
+                callback(.failure(.thrownError(error)))
+            }
+        }.resume() // End of dataTask
+    } // End of fetchMovieDetail
+    
     func fetchImage(with poserPath: String, completion: @escaping(Result<UIImage, ResultError>) -> Void) {
         guard let baseURL = URL(string: "https://image.tmdb.org/t/p/w500") else { completion(.failure(.invalidURL)) ; return }
         

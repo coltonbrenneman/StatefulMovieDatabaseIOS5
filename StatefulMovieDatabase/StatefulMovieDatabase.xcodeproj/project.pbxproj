@@ -108,9 +108,8 @@
 		445763A52A44AF4C00396ADF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				41990FB527B4CA590093B4DB /* MovieListTableViewController.swift */,
-				41990FB727B4CAAF0093B4DB /* MovieTableViewCell.swift */,
-				44FB9F6A2A46098300443BD2 /* MovieDetailViewController.swift */,
+				44FB9F6C2A460D3E00443BD2 /* TableVIew */,
+				44FB9F6D2A460D5000443BD2 /* DetailView */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -131,6 +130,23 @@
 				445FBD9B2A44BBC4000545C1 /* ResultError.swift */,
 			);
 			path = ModelControllers;
+			sourceTree = "<group>";
+		};
+		44FB9F6C2A460D3E00443BD2 /* TableVIew */ = {
+			isa = PBXGroup;
+			children = (
+				41990FB527B4CA590093B4DB /* MovieListTableViewController.swift */,
+				41990FB727B4CAAF0093B4DB /* MovieTableViewCell.swift */,
+			);
+			path = TableVIew;
+			sourceTree = "<group>";
+		};
+		44FB9F6D2A460D5000443BD2 /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				44FB9F6A2A46098300443BD2 /* MovieDetailViewController.swift */,
+			);
+			path = DetailView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

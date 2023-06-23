@@ -26,9 +26,11 @@ struct Movie: Decodable {
         case movieRating = "vote_average"
         case movieDescription = "overview"
         case posterPath = "poster_path"
+        case movieID = "id"
     }
     let movieName: String
     let movieRating: Double
     let movieDescription: String
     let posterPath: String?
+    let movieID: Int
 }

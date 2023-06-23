@@ -9,11 +9,12 @@ import Foundation
 
 struct MovieDetailDict: Decodable {
     
-    let budget: String
+    let budget: Int
     let revenue: Int
     let title: String
     let popularity: Double
     let runtime: Int
     let tagline: String
+    let overview: String
 }
 

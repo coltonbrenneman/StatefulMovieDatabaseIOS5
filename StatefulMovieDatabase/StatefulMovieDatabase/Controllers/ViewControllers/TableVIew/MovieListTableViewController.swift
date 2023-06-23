@@ -36,6 +36,32 @@ class MovieListTableViewController: UITableViewController {
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "toDetailVC",
+              let indexPath = tableView.indexPathForSelectedRow,
+              let cell = tableView.cellForRow(at: indexPath) as? MovieTableViewCell,
+              let destination = segue.destination as? MovieDetailViewController else { return }
+        
+        // Option 1 or the old way we've done it before.
+        //  let movie = topLevelDictionary?.movies[indexPath.row]
+        //  let id = movie?.movieID
+        
+        // Option 2 ; we made 2 properties on our Custom Cell to get our movie and movie image
+        // These are the objects that we want to send
+        guard let movie = cell.movieToSendInSegue else { return }
+        let movieImage = cell.moviePosterToSendInSegue
+        
+              // Fetch the details of the movie that the user selected
+        NetworkingController().fetchMovieDetail(for: movie.movieID) { result in
+            switch result {
+            case .success(let movieDetailDict):
+                destination.movieImageSentViaSegua = movieImage
+                destination.movieDetailSentViaSegue = movieDetailDict
+            case .failure(let error):
+                print(error.errorDescription!)
+            }
+        } // End of fetchMovieDetail
+    } // End of segue
 } // End of class
 
 extension MovieListTableViewController: UISearchBarDelegate {
