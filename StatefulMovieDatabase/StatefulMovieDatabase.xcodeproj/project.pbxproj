@@ -18,6 +18,7 @@
 		445FBD9A2A44B731000545C1 /* NetworkingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445FBD992A44B731000545C1 /* NetworkingController.swift */; };
 		445FBD9C2A44BBC4000545C1 /* ResultError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445FBD9B2A44BBC4000545C1 /* ResultError.swift */; };
 		44FB9F692A45FD0C00443BD2 /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FB9F682A45FD0C00443BD2 /* MovieDetail.swift */; };
+		44FB9F6B2A46098300443BD2 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FB9F6A2A46098300443BD2 /* MovieDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		445FBD992A44B731000545C1 /* NetworkingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingController.swift; sourceTree = "<group>"; };
 		445FBD9B2A44BBC4000545C1 /* ResultError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultError.swift; sourceTree = "<group>"; };
 		44FB9F682A45FD0C00443BD2 /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
+		44FB9F6A2A46098300443BD2 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			children = (
 				41990FB527B4CA590093B4DB /* MovieListTableViewController.swift */,
 				41990FB727B4CAAF0093B4DB /* MovieTableViewCell.swift */,
+				44FB9F6A2A46098300443BD2 /* MovieDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				445FBD9A2A44B731000545C1 /* NetworkingController.swift in Sources */,
 				418FA6AA27B4058300ABEC96 /* SceneDelegate.swift in Sources */,
 				445FBD972A44B4B7000545C1 /* Movie.swift in Sources */,
+				44FB9F6B2A46098300443BD2 /* MovieDetailViewController.swift in Sources */,
 				44FB9F692A45FD0C00443BD2 /* MovieDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
