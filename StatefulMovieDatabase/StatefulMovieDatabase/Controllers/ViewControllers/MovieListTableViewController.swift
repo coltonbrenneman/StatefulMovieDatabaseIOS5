@@ -55,5 +55,4 @@ extension MovieListTableViewController: UISearchBarDelegate {
         }
         searchBar.resignFirstResponder()
     }
-    //TODO: - Search for a Movie
 } //End of extension
